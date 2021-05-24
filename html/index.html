@@ -2,160 +2,93 @@
 <html>
 
 <head>
-  <title>Learning Javascript - The Solar System</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description" content="example js library">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../js/solar.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/styles.css " />
+    <title>Learning Javascript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="example js libraries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css " />
+    <style type="text/css">
+        #navbar ul {
+            margin: 0;
+            padding: 12px;
+            list-style-type: none;
+            text-align: center;
+            background-color: #000;
+            font-family: Calibri;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
+        #navbar ul li {
+            display: inline;
+        }
 
-<body class="opening hide-UI view-2D zoom-large data-close controls-close">
-  <div id="navbar">
-    <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
-    <h1>3D Solar System<br><span>by <a href="https://twitter.com/JulianGarnier"
-          target="_blank">@JulianGarnier</a></span></h1>
-    <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
-  </div>
-  <div id="data">
-    <a class="sun" title="sun" href="#sunspeed">Sun</a>
-    <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
-    <a class="venus" title="venus" href="#venusspeed">Venus</a>
-    <a class="earth active" title="earth" href="#earthspeed">Earth</a>
-    <a class="mars" title="mars" href="#marsspeed">Mars</a>
-    <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
-    <a class="saturn" title="saturn" href="#saturnspeed">Saturn</a>
-    <a class="uranus" title="uranus" href="#uranusspeed">Uranus</a>
-    <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
-  </div>
-  <div id="controls">
-    <label class="set-view">
-      <input type="checkbox">
-    </label>
-    <label class="set-zoom">
-      <input type="checkbox">
-    </label>
-    <label>
-      <input type="radio" class="set-speed" name="scale" checked>
-      <span>Speed</span>
-    </label>
-    <label>
-      <input type="radio" class="set-size" name="scale">
-      <span>Size</span>
-    </label>
-    <label>
-      <input type="radio" class="set-distance" name="scale">
-      <span>Distance</span>
-    </label>
-  </div>
-  <div id="universe" class="scale-stretched">
-    <div id="galaxy">
-      <div id="solar-system" class="earth">
-        <div id="mercury" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Mercury</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="venus" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Venus</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="earth" class="orbit">
-          <div class="pos">
-            <div class="orbit">
-              <div class="pos">
-                <div class="moon"></div>
-              </div>
-            </div>
-            <div class="planet">
-              <dl class="infos">
-                <dt>Earth</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="mars" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Mars</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="jupiter" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Jupiter</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="saturn" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <div class="ring"></div>
-              <dl class="infos">
-                <dt>Saturn</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="uranus" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Uranus</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="neptune" class="orbit">
-          <div class="pos">
-            <div class="planet">
-              <dl class="infos">
-                <dt>Neptune</dt>
-                <dd><span></span></dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div id="sun">
-          <dl class="infos">
-            <dt>Sun</dt>
-            <dd><span></span></dd>
-          </dl>
-        </div>
-      </div>
+        #navbar ul li a {
+            text-decoration: none;
+            padding: .1em 2em;
+            color: #fff;
+            background-color: #000;
+        }
+
+        #navbar ul li a:hover {
+            color: #000;
+            background-color: #ccecff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container1">
+
+        <h1>Learning about JavaScript</h1>
+        <br> <br>
     </div>
-  </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    if (typeof jQuery == 'undefined') {
-      document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
-    }
-  </script>
-  <script src="js/prefixfree.min.js"></script>
-  <script src="js/scripts.min.js"></script>
 
+    <br> <br>
+    <div id="navbar">
+        <!--creates a bar with buttons that allows you to open up other pages in your website-->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hearts.html">Floating Hearts</a></li>
+            <li><a href="flowers.html">Flower Animation</a></li>
+            <li><a href="solarsystem.html">Solar System</a></li>
+        </ul>
+    </div>
+    <br>
+    <div id="container2">
+        <br>
+        <h2>What are JavaScript Libraries?</h2>
+        <p>In the early days of the web, every web page consisted of nothing but plain text in different sizes with
+            links between pages. There were no web forms, and there certainly wasn’t any animation. JavaScript was
+            created in order to make it possible for web browsers to be interactive.</p>
+
+        <p> Whenever you visit a website and see something moving, or you see data appearing and changing on the page,
+            or you see interactive maps or browser-based games, chances are, it’s JavaScript at work.</p>
+
+        <p> There are a billion webpages, and many of them are interactive in some way. How many websites have you seen
+            that use a slideshow? I've seen hundreds, myself!</p>
+        <a
+            href="https://www.lensculture.com/articles/national-geographic-125-years-of-national-geographic-the-photo-issue#slideshow">For
+            example, here's one from National Geographic</a>
+        <br>
+        <p>Take a look at the examples: floating, hearts, animated flower and the solarstystem. The three animated
+            images were sourced from<a href="https://codepen.io/trending"> CodePen. </a>
+            <br>
+            <br>
+            <h3>How to link to your CSS and JavaScript files. </h3>
+                      
+            <ol>    
+                <li>  Insert a link in your head section to the CSS/styles:
+                    link rel="stylesheet" type="text/css" href="../css/styles.css "</li>
+                    <li>When copying the code for the JavaScript, paste it into a new file and give it a meaningful name. For the hearts example, the file was named hearts.js and saved to a js folder.</li>
+                    <li>A link is required and goes into the head section of your HTML: script src="../js/hearts.js"
+                        In the body section put the html code at the point you want it to be displayed. For the hearts example the code was simply:   div class="bg_heart"</li>
+            </ol>
+    
+    </div>
+    <br>
 </body>
 
 </html>
