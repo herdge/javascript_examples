@@ -1,61 +1,69 @@
 body {
-  background-color:hsl(213, 47%, 89%);;
+	background-color: hsl(213, 47%, 89%);
+	;
 }
 
-h1{
-color: #000000;
-font-family: Tahoma;
-text-align: center;
-font-size: 60px;
+h1 {
+	color: #000000;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 60px;
 }
-#container1{
-width: 1060px;
-height: 90px; 
-background-color: hsl(213, 47%, 89%);
-padding: 10px;
-margin-left: auto;
-margin-right: auto;
-float: center;
-}	
 
-#container2{
+#container1 {
 	width: 1060px;
-	background-color: hsl(212, 52%, 57%);
-	padding-left: 5%;
-    padding-right: 5%;
+	height: 90px;
+	background-color: hsl(213, 47%, 89%);
+	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	float: center;
-    height: 600px;
-	}
-h2{
+}
+
+#container2 {
+	width: 1060px;
+	/*height: 750px; */
+	background-color: hsl(212, 52%, 57%);
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+}
+
+h2 {
 	color: #000000;
 	font-family: Tahoma;
 	text-align: center;
 	font-size: 40px;
-    float: center;
-	}
-  h3{
-    color: #000000;
-    font-family: Tahoma;
-    text-align: center;
-    font-size: 30px;
-      float: center;
-    }
-p{
+	float: center;
+}
+
+h3 {
+	color: #000000;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 30px;
+	float: center;
+}
+
+p {
 	font-family: Arial, Sans-serif;
 	color: black;
 	font-size: px;
 	text-align: left;
-	}
-	a {
-    color:#f70404;     
-    font-family:Tahoma;
-    font-size:15px;
+}
+
+a {
+	color: #fcf2ff;
+	font-family: Tahoma;
+	font-size: 15px;
 	font-weight: 700;
-font-weight: bold;
-	}
-	ol {
-		padding-left: 50px;
-		font-family: Arial;	
-   }
+	font-weight: bold;
+}
+
+ol {
+	padding-left: 50px;
+	font-family: Arial;
+}
